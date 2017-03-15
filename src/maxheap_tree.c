@@ -309,7 +309,7 @@ void insertSort( int a[], int n )
 				j--;
 			}
 			
-			a[j] = value;
+			a[j] = value
 		}
 	}
 }
