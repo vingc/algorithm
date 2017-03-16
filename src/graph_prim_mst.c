@@ -168,9 +168,9 @@ void primMST( GRAPH * graph )
     //init
     for( i = 0; i < graph->V; i++ )
     {
-        graph->mstSet[ i ] = 0; // strore the parent of verties in MST, 
+        graph->mstSet[ i ] = 0; //keep track of edges in mstTree.
         graph->key[ i ] = INFIT; 
-        graph->parent[ i ] = -1;
+        graph->parent[ i ] = -1; // strore the parent of verties in MST, 
     }
     
     //begin from 0;
