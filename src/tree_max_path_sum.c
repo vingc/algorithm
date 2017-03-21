@@ -60,24 +60,26 @@ int max( int a, int b )
 2. so the maximum path sum of root is max(A1,A2,B1+B2+root.value)*/
 void findMaxPathSum( node_t * root, int * MaxDepthSum, int * MaxPathSum )
 {
-    int leftMaxDepthSum = 0 ;
+    int leftMaxDepthSum  = 0 ;
     int rightMaxDepthSum = 0;
 
-    int leftMaxPathSum = 0;
-    int rightMaxPathSum = 0;
+    int leftMaxPathSum   = 0;
+    int rightMaxPathSum  = 0;
 
     if( root == NULL )
     {
         return;
     }
 
+#if 0
     //if no subtree, the maximum of path sum from root is the value of root.
-    if( root->left == NULL || root->right == NULL )
+    if( root->left == NULL && root->right == NULL )
     {
         *MaxDepthSum = root->v; //only root node
-        *MaxPathSum = root->v;  //only root node
+        *MaxPathSum  = root->v;  //only root node
         return;
     }
+#endif
 
     //recursive the subtree
     findMaxPathSum( root->left, &leftMaxDepthSum, &leftMaxPathSum );
@@ -97,7 +99,8 @@ void main( void )
     node_t * root = newNode( 0 );
     root->left = newNode( 1 );
     root->right = newNode( 2 );
-    root->left->left = newNode( 3 );
+    root->left->left = newNode( 31 );
+    root->left->right = newNode( 21 );
     root->right->right = newNode( 4 );
     //root->right->right->left = newNode( 5 );
 
