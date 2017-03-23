@@ -52,12 +52,12 @@ void freeTree( node_t ** root )
 
     if( curNode->left )
     {
-        freeBst( &curNode->left );
+        freeTree( &curNode->left );
     }
 
     if( curNode->right )
     {
-        freeBst( &curNode->right );
+        freeTree( &curNode->right );
     }
 
     free( curNode );
