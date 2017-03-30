@@ -59,5 +59,37 @@ void main( void )
     int n = sizeof(price)/sizeof(price[0]);
 
     // fucntion call
-    findBuySellDay(price, n);
+    //findBuySellDay(price, n);
+    int a[] = {0,0,1,1,0,1,0,1,1,0};
+    fun( a, 0, 10 );
 }
+
+
+void fun( int a[], int begin, int end )
+{
+    int i;
+
+    for( i = begin; i < end; i++ )
+    {
+        if( a[i] == 1 )
+        {
+            fun( a, i+1, end );
+            a[i] = 0;
+            fun( a, i+1, end );
+            a[i] = 1;//restore
+            break;
+        }
+    }
+
+    if( i == end  )
+    {
+        //print array
+        for( i = 0; i < end; i++ )
+        {
+            printf( "%d ", a[i] );
+        }
+        printf( "\n" );
+    }
+}
+
+
