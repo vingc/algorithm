@@ -1,4 +1,4 @@
 # algorithm
-This repo consists of practices when learn algorithm on [GeeksForGeeks](http://www.geeksforgeeks.org).
+This repo consists of practices of learning algorithm on [GeeksForGeeks](http://www.geeksforgeeks.org).
 
 Program language is C.
